@@ -38,8 +38,8 @@ jobs:
         run: |
           aws s3 sync dist/ s3://react-app-prod-pardhiv --delete
 
-      - name: Invalidate CloudFront
-        run: |
-          aws cloudfront create-invalidation \
-            --distribution-id YOUR_CF_DISTRIBUTION_ID \
-            --paths "/*"
+      # - name: Invalidate CloudFront
+      #   run: |
+      #     aws cloudfront create-invalidation \
+      #       --distribution-id YOUR_CF_DISTRIBUTION_ID \
+      #       --paths "/*"
